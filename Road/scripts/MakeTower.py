@@ -36,34 +36,34 @@ if len (result) >= 2:
         if i<7:
             windowInstance = cmds.instance(windows, name=windows+'_instance#')
             cmds.parent (windowInstance, windowGroup)
-            x = -floorScale[0]/2
-            y = (i*30) + 30
-            z = -900
+            x = -52#-floorScale[0]/2
+            y = (i*30) -60#+ 30
+            z = -32#-900
             cmds.move(x, y, z, windowInstance )
             windowInstance = cmds.instance(windows, name=windows+'_instance#')
             cmds.parent (windowInstance, windowGroup)
-            x = floorScale[0]/2
-            y = (i*30) + 30
-            z = -900
+            x = 102#floorScale[0]/2
+            y = (i*30) -60#+ 30
+            z = -32#-900
             cmds.move(x, y, z, windowInstance )
             windowInstance = cmds.instance(windows, name=windows+'_instance#')
             cmds.parent (windowInstance, windowGroup)
-            x = 0
-            y = (i*30) + 30
-            z = -900+floorScale[2]/2
+            x = 25
+            y = (i*30) -60#+ 30
+            z = -112#-900+floorScale[2]/2
             cmds.move(x, y, z, windowInstance )
-            xRot = 90
-            zRot = 90
-            cmds.rotate(xRot,0,zRot,windowInstance)
+            yRot = 90
+            zRot = 180
+            cmds.rotate(0,yRot,zRot,windowInstance)
             windowInstance = cmds.instance(windows, name=windows+'_instance#')
             cmds.parent (windowInstance, windowGroup)
-            x = 0#random.uniform(0, 10)
-            y = (i*30) + 30#random.uniform(0, 10)
-            z = -900-floorScale[2]/2#random.uniform(0, 10)
+            x = 25#random.uniform(0, 10)
+            y = (i*30) -60#+ 30#random.uniform(0, 10)
+            z = 52#-900-floorScale[2]/2#random.uniform(0, 10)
             cmds.move(x, y, z, windowInstance )
-            xRot = 90
-            zRot = 90
-            cmds.rotate(xRot,0,zRot,windowInstance)
+            yRot = 90
+            zRot = 180
+            cmds.rotate(0,yRot,zRot,windowInstance)
         
         #cmds.hide (transformName)
         #cmds.delete(transformName)
